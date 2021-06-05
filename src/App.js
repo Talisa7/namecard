@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import Header from './component/Header';
 import './App.css';
+import Main from './component/Main';
+import Footer from './component/Footer';
+import Background from './images/pink.jpg';
+import { useState } from 'react';
 
 function App() {
+  const [skills, setSkills] = useState("My name is Talisa")
+
+  const handleName =()=>{
+    setSkills("My name is Talisa")
+  }
+
+  const handleSkills=()=>{
+    setSkills("I am a Front-end Developer")
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <div className="container">
+        <div>
+        <Header tech={skills} />
+        <Main handleName={handleName} handleSkills={handleSkills}/>
+        <Footer/>
+        </div>
+        
+
+      </div>
+    
+    
+    
+    
+    
+    
+    </>
+    
+
+
   );
 }
 
