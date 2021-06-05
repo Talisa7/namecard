@@ -2,7 +2,6 @@ import Header from './component/Header';
 import './App.css';
 import Main from './component/Main';
 import Footer from './component/Footer';
-import Background from './images/pink.jpg';
 import { useState } from 'react';
 
 function App() {
